@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+
+  --grid-offset: calc(50% - 3.75rem / 2);
+  -webkit-overflow-scrolling: auto;
+  background: black;
+  background-image: linear-gradient(
+      to right,
+      #0b0b0b 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, #0b0b0b 1px, transparent 1px);
+  background-position: var(--grid-offset) var(--grid-offset);
+  background-size: 3.75rem 3.75rem;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100vw;
+}
+
+.box {
+  --border-size: 3px;
+  --border-angle: 0turn;
+  /* width: 60vmin;
+  height: 50vmin; */
+  -webkit-animation: bg-spin 60s linear infinite;
+  animation: bg-spin 60s linear infinite;
+}
+@-webkit-keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+/* .box:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+} */
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+pre {
+  font-size: 0.8em;
+}

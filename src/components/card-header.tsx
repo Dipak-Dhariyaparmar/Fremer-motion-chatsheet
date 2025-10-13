@@ -1,4 +1,4 @@
-//This component is related to card-header 
+//This component is related to card-headers
 
 
 "use client";

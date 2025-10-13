@@ -1,3 +1,6 @@
+//This component is related to card-header 
+
+
 "use client";
 
 import { usePathname } from "next/navigation";

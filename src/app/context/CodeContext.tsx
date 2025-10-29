@@ -1,4 +1,4 @@
-//This component is related to codecontexts
+//This component is related to codecontext
 
 
 "use client";

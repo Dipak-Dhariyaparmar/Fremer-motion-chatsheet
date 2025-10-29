@@ -1,3 +1,6 @@
+//This component is related to codecontexts
+
+
 "use client";
 
 import { createContext, useContext, useState } from "react";

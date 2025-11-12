@@ -1,4 +1,4 @@
-//This component is related to back-icons
+//This component is related to back-icon
 
 
 "use client";
